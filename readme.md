@@ -15,4 +15,4 @@ Check if querystring parameter exists:
 Set a different view script:
     
     $viewModel = new ViewModel();
-    $viewModel->setTemplate('controller/action/viewscript.phtml');
+    $viewModel->setTemplate('module/controller/viewscript.phtml');
