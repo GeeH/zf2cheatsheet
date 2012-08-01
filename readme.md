@@ -18,6 +18,9 @@ Set a different view script:
     $viewModel->setTemplate('module/controller/viewscript.phtml');
     
 Get action from controller:
+
     $this->getEvent()->getRouteMatch();
-    or
+    
+or
+    
     $this->params()->fromRoute('action');
