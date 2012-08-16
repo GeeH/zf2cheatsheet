@@ -24,3 +24,8 @@ Get action from controller:
 or
     
     $this->params()->fromRoute('action');
+    
+Disable layout in a ViewModel:
+
+    $viewModel = new ViewModel();
+    $viewModel->setTerminal(true);
