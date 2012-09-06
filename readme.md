@@ -11,6 +11,10 @@ Access querystring parameter:
 Check if querystring parameter exists:
 
     $this->getRequest()->getQuery()->offsetExists('foo');
+    
+Get a parameter from the route
+
+    $slug = $this->getEvent()->getRouteMatch()->getParam('slug');
 
 Set a different view script:
     
