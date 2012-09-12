@@ -33,3 +33,14 @@ Disable layout in a ViewModel:
 
     $viewModel = new ViewModel();
     $viewModel->setTerminal(true);
+    
+Set custom headers or response code:
+
+    /** @var \Zend\Http\PhpEnvironment\Response $response  */
+    $response = $this->getResponse();
+    /** 404 Not Found page return magically */
+    $response->setStatusCode(404);
+    /** Set custom response headder */
+    $headers = new \Zend\Http\Headers();
+    $headers->addHeaderLine('My-Custom-Header', 'ZF2');
+    $response->setHeaders($headers);
