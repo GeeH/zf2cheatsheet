@@ -6,15 +6,15 @@ Controller Stuff
 ----------------
 Access querystring parameter:
 
-    $this->getRequest()->getQuery()->foo;
+    $this->params()->fromQuery('foo');
 
 Check if querystring parameter exists:
 
-    $this->getRequest()->getQuery()->offsetExists('foo');
+    null !== $this->params()->fromQuery('foo', null);
     
 Get a parameter from the route
 
-    $slug = $this->getEvent()->getRouteMatch()->getParam('slug');
+    $slug = $this->params('slug');
 
 Set a different view script:
     
@@ -27,7 +27,7 @@ Get action from controller:
     
 or
     
-    $this->params()->fromRoute('action');
+    $this->params('action');
     
 Disable layout in a ViewModel:
 
@@ -41,6 +41,5 @@ Set custom headers or response code:
     /** 404 Not Found page return magically */
     $response->setStatusCode(404);
     /** Set custom response headder */
-    $headers = new \Zend\Http\Headers();
+    $headers = $response->getHeaders();
     $headers->addHeaderLine('My-Custom-Header', 'ZF2');
-    $response->setHeaders($headers);
