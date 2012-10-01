@@ -43,3 +43,8 @@ Set custom headers or response code:
     /** Set custom response headder */
     $headers = $response->getHeaders();
     $headers->addHeaderLine('My-Custom-Header', 'ZF2');
+    
+#Module Stuff
+Change controller in `Module.php`:
+    $controller = $e->getTarget();
+    $controller->layout('layout/alternativelayout');
