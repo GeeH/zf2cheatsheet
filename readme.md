@@ -34,6 +34,10 @@ Disable layout in a ViewModel:
     $viewModel = new ViewModel();
     $viewModel->setTerminal(true);
     
+Disable view rendering from an action:
+
+    return $this->response;
+    
 Set custom headers or response code:
 
     /** @var \Zend\Http\PhpEnvironment\Response $response  */
